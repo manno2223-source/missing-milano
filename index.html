@@ -9,13 +9,23 @@
 <body>
 
   <header>
+    <!-- BARRA DI NAVIGAZIONE CON HOME E OPERA 2 -->
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link active">🏠 Home / Opera 1</a>
+      <a href="artwork2.html" class="nav-link">🖼️ Opera 2: Battesimo</a>
+    </nav>
+
     <h1>The Ark & Missing Milano</h1>
     <p class="subtitle">An AI Investigation into Restored Masterpieces</p>
   </header>
 
   <main>
+    <!-- SEZIONE GIOCO INTERATTIVO OPERA 1 -->
     <section class="game-container">
-      <h2>Interactive Game: Guess Which Detail is Real!</h2>
+      <div class="section-header-meta">
+        <h2>Interactive Game: Guess Which Detail is Real!</h2>
+        <span class="location-tag-top">📍 Pinacoteca di Brera, Milano</span>
+      </div>
       <p>Can you spot the original artwork detail versus the AI restorations? Click your choice below:</p>
 
       <div class="game-cards" id="cards-container">
@@ -25,8 +35,12 @@
       <div id="game-feedback"></div>
     </section>
 
+    <!-- GALLERIA CONFRONTO DETTAGLI -->
     <section id="gallery-section">
-      <h2>Close-Up Comparison Gallery</h2>
+      <div class="section-header-meta">
+        <h2>Close-Up Comparison Gallery</h2>
+        <span class="location-tag-top">🔎 Restauro & AI Inpainting</span>
+      </div>
       <p>Compare the authentic detail with AI results side-by-side:</p>
 
       <div class="gallery-grid">
@@ -59,8 +73,12 @@
       </div>
     </section>
 
+    <!-- INFORMAZIONI OPERA 1 -->
     <section>
-      <h2>About This Artwork & Experiment</h2>
+      <div class="section-header-meta">
+        <h2>About This Artwork & Experiment</h2>
+        <span class="location-tag-top">🏛️ Paris Bordon (1548–1551)</span>
+      </div>
       <p>This project explores how generative AI models reconstruct missing historical details in classic artworks. While AI generated images look convincing as a whole, close-up scrutiny reveals differences in geometry, lighting, and missing elements.</p>
       
       <div class="location-box">
