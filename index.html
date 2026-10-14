@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ark & Missing Milano — Close-up Detail Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>The Ark & Missing Milano</h1>
+    <p class="subtitle">An AI Investigation into Restored Masterpieces</p>
+  </header>
+
+  <main>
+    <section class="game-container">
+      <h2>Interactive Game: Guess Which Detail is Real!</h2>
+      <p>Can you spot the original artwork detail versus the AI restorations? Click your choice below:</p>
+
+      <div class="game-cards" id="cards-container">
+        <!-- Generato da JS in ordine casuale -->
+      </div>
+
+      <div id="game-feedback"></div>
+    </section>
+
+    <section id="gallery-section">
+      <h2>Close-Up Comparison Gallery</h2>
+      <p>Compare the authentic detail with AI results side-by-side:</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <span class="badge badge-original">Original Detail</span>
+          <img src="original-detail.png" alt="Original Artwork Detail">
+          <h3>Authentic Painting</h3>
+          <p>Shows the original angel in the top-left corner, the water bowl, and Christ with a radiant halo.</p>
+        </div>
+
+        <div class="gallery-item">
+          <span class="badge badge-ai">AI Detail A</span>
+          <img src="a-detail.png" alt="AI Restoration A">
+          <h3>First AI Attempt</h3>
+          <button class="spot-btn" onclick="toggleComment('comment-a')">What changed?</button>
+          <div id="comment-a" class="spot-comment">
+            <strong>Observation:</strong> Look at the top-left corner: the angel is completely missing and replaced with clouds! The edge of the water bowl is also distorted.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <span class="badge badge-ai">AI Detail B</span>
+          <img src="b-detail.png" alt="AI Restoration B">
+          <h3>Refined AI Result</h3>
+          <button class="spot-btn" onclick="toggleComment('comment-b')">What changed?</button>
+          <div id="comment-b" class="spot-comment">
+            <strong>Observation:</strong> With added guidance, the AI reconstructed the angel in the top-left and restored the water bowl correctly.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>About This Artwork & Experiment</h2>
+      <p>This project explores how generative AI models reconstruct missing historical details in classic artworks. While AI generated images look convincing as a whole, close-up scrutiny reveals differences in geometry, lighting, and missing elements.</p>
+      
+      <div class="location-box">
+        <h3>📍 Artwork Location & Information</h3>
+        <p><strong>Title:</strong> <em>Battesimo di Cristo</em> (Baptism of Christ)</p>
+        <p><strong>Artist:</strong> Paris Bordon (1548–1551)</p>
+        <p><strong>Location:</strong> Pinacoteca di Brera — Milano (Sala XIV)</p>
+        <p style="margin-top: 8px;">
+          🔗 <a class="artwork-link" href="https://pinacotecabrera.org/collezioni/collezione-on-line/battesimo-di-cristo-2/" target="_blank" rel="noopener">Visualizza la scheda dell'opera sul sito ufficiale della Pinacoteca di Brera</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Image credits: Photo by Warburg (CC BY-SA 3.0). White rectangular gap added for educational workshop activities.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
