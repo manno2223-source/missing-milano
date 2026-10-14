@@ -18,10 +18,13 @@
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
   background-color: var(--bg-dark);
-  /* Sfondo ad atmosfera museale: verde sottobosco profondo al centro e vignette scura ai bordi */
+  /* Sfondo con velo d'ombra al 85-92% sopra l'immagine per non rovinare la leggibilità */
   background-image: 
-    radial-gradient(circle at 50% 25%, rgba(32, 58, 43, 0.5) 0%, rgba(9, 16, 12, 0.98) 75%),
-    radial-gradient(circle at 80% 80%, rgba(212, 163, 89, 0.05) 0%, transparent 50%);
+    linear-gradient(rgba(9, 16, 12, 0.85), rgba(9, 16, 12, 0.92)),
+    url('forest-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
