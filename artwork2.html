@@ -8,21 +8,24 @@
 </head>
 <body>
 
- <header>
-    <!-- BARRA DI NAVIGAZIONE -->
+  <header>
+    <!-- BARRA DI NAVIGAZIONE CON HOME -->
     <nav class="nav-menu">
-      <a href="index.html" class="nav-link active">🖼️ Opera 1: Paris Bordon</a>
-      <a href="artwork2.html" class="nav-link">🖼️ Opera 2: Battesimo di Cristo</a>
+      <a href="index.html" class="nav-link">🏠 Home / Opera 1</a>
+      <a href="artwork2.html" class="nav-link active">🖼️ Opera 2: Battesimo</a>
     </nav>
 
     <h1>The Ark & Missing Milano</h1>
-    <p class="subtitle">An AI Investigation into Restored Masterpieces</p>
+    <p class="subtitle">An AI Investigation into Restored Masterpieces — Case Study #2</p>
   </header>
 
   <main>
     <!-- GIOCO INTERATTIVO OPERA 2 -->
     <section class="game-container">
-      <h2>Interactive Game: Guess Which Detail is Real! (Artwork #2)</h2>
+      <div class="section-header-meta">
+        <h2>Interactive Game: Guess Which Detail is Real!</h2>
+        <span class="location-tag-top">📍 Pinacoteca di Brera, Milano</span>
+      </div>
       <p>Can you spot the original artwork detail versus the AI restorations? Click your choice below:</p>
 
       <div class="game-cards" id="cards-container">
@@ -32,9 +35,12 @@
       <div id="game-feedback"></div>
     </section>
 
-    <!-- GALLERIA CONFRONTO (NASCOSTA ALL'INIZIO) -->
+    <!-- GALLERIA CONFRONTO -->
     <section id="gallery-section">
-      <h2>Close-Up Comparison Gallery (Artwork #2)</h2>
+      <div class="section-header-meta">
+        <h2>Close-Up Comparison Gallery</h2>
+        <span class="location-tag-top">🔎 Restauro & AI Inpainting</span>
+      </div>
       <p>Compare the authentic detail with the AI restoration attempts side-by-side:</p>
 
       <div class="gallery-grid">
@@ -42,7 +48,7 @@
           <span class="badge badge-original">Original Detail</span>
           <img src="original-detail-2.png" alt="Original Artwork 2 Detail">
           <h3>Authentic Painting</h3>
-          <p>Shows the original figure on the left holding the white drapery with warm, aged tones.</p>
+          <p>Shows the original figure holding the white drapery with warm, aged brushstrokes.</p>
         </div>
 
         <div class="gallery-item">
@@ -51,7 +57,7 @@
           <h3>First AI Attempt</h3>
           <button class="spot-btn" onclick="toggleComment('comment-a')">What changed?</button>
           <div id="comment-a" class="spot-comment">
-            <strong>Observation:</strong> Notice how the AI generated multiple angel heads grouped together in prayer, altering the original single figure composition.
+            <strong>Observation:</strong> The AI reconstructed a group of multiple praying angel heads in the background clouds.
           </div>
         </div>
 
@@ -61,7 +67,7 @@
           <h3>Refined AI Result</h3>
           <button class="spot-btn" onclick="toggleComment('comment-b')">What changed?</button>
           <div id="comment-b" class="spot-comment">
-            <strong>Observation:</strong> The AI re-created a single angel profile with wings looking towards the right, with brighter and cleaner color saturation.
+            <strong>Observation:</strong> The AI created a single angel in profile with golden robes and wings facing right.
           </div>
         </div>
       </div>
@@ -69,14 +75,17 @@
 
     <!-- INFORMAZIONI OPERA 2 -->
     <section>
-      <h2>About Artwork #2 & Experiment</h2>
+      <div class="section-header-meta">
+        <h2>About Artwork #2</h2>
+        <span class="location-tag-top">🏛️ Collezione Storica Milano</span>
+      </div>
       <p>This second case study analyzes the restoration of a <em>Baptism of Christ</em> masterpiece. The white masked area on the left posed a challenge for AI inpainting: should it reconstruct multiple celestial angels or a single attendant angel holding Christ's garments?</p>
 
       <div class="location-box">
-        <h3>📍 Artwork Information</h3>
+        <h3>📍 Artwork Location & Metadata</h3>
         <p><strong>Title:</strong> <em>Battesimo di Cristo</em> (Baptism of Christ)</p>
+        <p><strong>Location:</strong> Milano, Italia (Collezione d'Arte Storica / Restauro)</p>
         <p><strong>Subject:</strong> St. John the Baptist, Christ in Prayer, Celestial Angels</p>
-        <p><strong>Analysis:</strong> Comparing historical drapery, angel iconography, and lighting consistency.</p>
       </div>
     </section>
   </main>
@@ -92,21 +101,21 @@
         type: 'Original',
         src: 'original-detail-2.png',
         isReal: true,
-        desc: 'Correct! This is the original painting detail with authentic aged brushstrokes and composition.'
+        desc: 'Correct! This is the original painting detail with authentic aged brushstrokes.'
       },
       {
         id: 'a',
         type: 'AI Detail A',
         src: 'detail-a-2.png',
         isReal: false,
-        desc: 'Incorrect! This is AI Detail A, which reconstructed a group of praying angel heads.'
+        desc: 'Incorrect! This is AI Detail A, which reconstructed a group of praying angels.'
       },
       {
         id: 'b',
         type: 'AI Detail B',
         src: 'detail-b-2.png',
         isReal: false,
-        desc: 'Incorrect! This is AI Detail B, an AI restoration featuring a single angel in profile.'
+        desc: 'Incorrect! This is AI Detail B, an AI restoration featuring a single angel profile.'
       }
     ];
 
